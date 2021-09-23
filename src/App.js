@@ -5,10 +5,10 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 
-import HomePage from './pages/home/home';
-import DocumentPage from './pages/documentation/documentation';
-import PremiumPage from './pages/premium/premium'
-import DashboardPage from './pages/dashboard/dashboard';
+import HomePage from './pages/home';
+import DocumentPage from './pages/documentation';
+import PremiumPage from './pages/premium'
+import DashboardPage from './pages/dashboard';
 
 import './App.css';
 

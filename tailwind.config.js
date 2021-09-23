@@ -13,7 +13,7 @@
 
 module.exports = {
   mode: "jit",
-  purge: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./public/index.html"],
+  purge: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/component/**/*.{js,ts,jsx,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

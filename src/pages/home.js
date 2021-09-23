@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { useParams } from "react-router";
 
 const HomePage = () => {
     return (
@@ -13,7 +14,7 @@ const HomePage = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-3 md:block lg:block space-x-2 p-5">
                     <button className="text-white bg-crusta h-auto p-3 font-bold rounded shadow-sm">
-                        <Link href="https://discord.com/api/oauth2/authorize?client_id=886307663917502545&permissions=3147776&scope=bot">
+                        <Link to="https://discord.com/api/oauth2/authorize?client_id=886307663917502545&permissions=3147776&scope=bot">
                             Invite the Bot
                         </Link>
                     </button>
