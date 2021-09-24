@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (
-        <main className="container w-full mx-auto pt-24">
+        <main className="container w-full mx-auto pt-24 h-screen">
             <section id="hero" className="w-full ">
                 <div className="grid place-content-center md:flex md:flex-col md:justify-center">
                     <h3 className="text-crusta text-base md:text-xl lg:text-xl">TAGLINE</h3>
@@ -19,7 +19,7 @@ const HomePage = () => {
                         </Link>
                     </button>
                     <button className="text-crusta bg-parchment h-auto p-3 font-bold rounded shadow-sm">
-                        <Link href="/premium">Get Premium</Link>
+                        <Link to="/premium">Get Premium</Link>
                     </button>
                 </div>
             </section>

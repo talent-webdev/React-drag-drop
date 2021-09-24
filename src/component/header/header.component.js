@@ -1,8 +1,7 @@
 
-import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
     { name: "Home", href: "/", current: true },
@@ -11,11 +10,11 @@ const navigation = [
     { name: "Dashboard", href: "/dashboard", current: false },
 ];
 
-function classNames(...classes) {
+const classNames = (...classes) => {
     return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+const Header = () => {
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -87,3 +86,5 @@ export default function Header() {
         </Disclosure>
     );
 }
+
+export default Header

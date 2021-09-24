@@ -1,10 +1,12 @@
-import React from "react";
+import PlayList from "../component/dashboard/playList";
+import SideBar from '../component/dashboard/sideBar'
 
 const DashboardPage = () => {
     return (
-        <div>
-            DashboardPage
-        </div>
+        <main className="bg-white flex p-4">
+            <SideBar />
+            <PlayList />
+        </main>
     )
 }
 
