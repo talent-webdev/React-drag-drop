@@ -23,7 +23,7 @@ const Header = () => {
                         <div className="flex items-center justify-between h-16">
                             <div className="flex-1 flex items-center justify-between sm:items-stretch sm:justify-start w-full">
                                 <div className="flex-shrink-0 flex items-center">
-                                    <Link href="/">
+                                    <Link to="/">
                                         <button className="font-bold text-white">LOGO</button>
                                     </Link>
                                 </div>

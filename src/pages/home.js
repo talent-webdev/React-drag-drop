@@ -14,9 +14,9 @@ const HomePage = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-3 md:block lg:block space-x-2 p-5">
                     <button className="text-white bg-crusta h-auto p-3 font-bold rounded shadow-sm">
-                        <Link to="https://discord.com/api/oauth2/authorize?client_id=886307663917502545&permissions=3147776&scope=bot">
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=886307663917502545&permissions=3147776&scope=bot">
                             Invite the Bot
-                        </Link>
+                        </a>
                     </button>
                     <button className="text-crusta bg-parchment h-auto p-3 font-bold rounded shadow-sm">
                         <Link to="/premium">Get Premium</Link>
