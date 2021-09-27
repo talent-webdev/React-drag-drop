@@ -8,70 +8,6 @@ import { setSideBarData, addPlayList } from '../../redux/audio/audio.actions';
 
 import SearchBox from './searchBox';
 
-
-const initialData = [
-    {
-        "tags": [],
-        "_id": "614d25902087803b833f9d50",
-        "genre": "ambient",
-        "name": "ASKII - Hegelburg - 03 Woods",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/ambient/ASKII - Hegelburg - 03 Woods",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    },
-    {
-        "tags": [],
-        "_id": "614d25e82087803b833f9d52",
-        "genre": "ambient",
-        "name": "ASKII - Hegelburg - 04 The White River",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/ambient/ASKII - Hegelburg - 04 The White River",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    },
-    {
-        "tags": [],
-        "_id": "614d26492087803b833f9d54",
-        "genre": "ambient",
-        "name": "ASKII - Hegelburg - 05 Harvest",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/ambient/ASKII - Hegelburg - 05 Harvest",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    },
-    {
-        "tags": [],
-        "_id": "614d26aa2087803b833f9d56",
-        "genre": "ambient",
-        "name": "ASKII - Hegelburg - 06 Sails",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/ambient/ASKII - Hegelburg - 06 Sails",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    },
-    {
-        "tags": [],
-        "_id": "614d2aba2087803b833f9d58",
-        "genre": "tension",
-        "name": "an unsettling feeling",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/tension/an unsettling feeling",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    },
-    {
-        "tags": [],
-        "_id": "614d2e272087803b833f9d5a",
-        "genre": "dungeon",
-        "name": "The Fire Catacombs",
-        "srcURL_HQ": "https://cdn.soncraft.app/music/high_quality/genre/dungeon/The Fire Catacombs",
-        "__v": 0,
-        "playsThisWeek": 0,
-        "playsThisWeekPremium": 0
-    }
-]
-
 const SideBar = (
     {
         setAudioSrc,
@@ -85,12 +21,11 @@ const SideBar = (
     const [searchField, setSearchField] = useState('');
 
     useEffect(() => {
-        // const getDatas = async () => {
-        //     const res = await axios.post("https://api.soncraft.app/api/tracks/getAllTracks");
-        //     dispatch(setSideBarData(res.data))
-        // }
-        // getDatas();
-        dispatch(setSideBarData(initialData))
+        const getData = async () => {
+            const res = await axios.post("https://api.soncraft.app/api/tracks/getAllTracks");
+            dispatch(setSideBarData(res.data))
+        }
+        getData();
     }, [])
 
     const onSearchChange = (e) => {

@@ -88,7 +88,7 @@ const PlayList = (
     }
 
     return (
-        <div className='md:w-3/4 bg-daback md:ml-3 md:p-20 sm:w-full sm:p-10' onDrop={e => drop(e)} onDragOver={e => allowDrop(e)}>
+        <div className='md:w-3/4 bg-daback md:ml-2 md:p-20 sm:w-full sm:p-10' onDrop={e => drop(e)} onDragOver={e => allowDrop(e)}>
             <div>
                 <AudioPlayer
                     src={audioSrc}
