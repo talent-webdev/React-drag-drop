@@ -10,7 +10,7 @@ import DocumentPage from './pages/documentation';
 import PremiumPage from './pages/premium'
 import DashboardPage from './pages/dashboard';
 
-import Header from './component/header/header.component';
+import Header from './component/header/header';
 
 const App = (props) => {
   return (

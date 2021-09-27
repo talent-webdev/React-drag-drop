@@ -5,6 +5,15 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      height: theme => ({
+        "screen/2": "50vh",
+        "screen/3": "calc(100vh / 3)",
+        "screen/4": "calc(100vh / 4)",
+        "screen/5": "calc(100vh / 5)",
+        "bodyHeight": "calc(100vh - 66px)",
+      }),
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -12,6 +21,9 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+    // minHeight: {
+    //   screen: 'calc(100vh - 200px)'
+    // },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -433,7 +445,7 @@ module.exports = {
       '4/6': '66.666667%',
       '5/6': '83.333333%',
       full: '100%',
-      screen: '100vh',
+      screen: '100vh-50px',
     }),
     inset: (theme, { negative }) => ({
       auto: 'auto',
